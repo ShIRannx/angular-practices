@@ -1,0 +1,15 @@
+<app-divider>Table</app-divider>
+<app-table styles="striped celled" [headers]="headers" [data]="data"></app-table>
+<app-divider>Tabs</app-divider>
+<app-tabs>
+  <ng-container tabs>
+    <a routerLink='.'  [routerLinkActiveOptions]='{exact: true}' routerLinkActive='active' class="item">Bio</a>
+    <a routerLink='companies'  routerLinkActive='active' class="item">Companies</a>
+    <a routerLink='partners'  routerLinkActive='active' class="item">Parters</a>
+  </ng-container>
+  <ng-container contents>
+    <router-outlet></router-outlet>
+  </ng-container>
+</app-tabs>
+
+

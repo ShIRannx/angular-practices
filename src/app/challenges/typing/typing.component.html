@@ -1,0 +1,20 @@
+<div class="d-flex j-center mt t-center">
+  <div class="rounded d-flex j-center flex-col px py">
+    <div class="header mb">
+      <h2>Typing Challenge</h2>
+    </div>
+    <div class="text mb">
+      <em>
+        <span
+          *ngFor="let t of words.split(''); let i = index"
+          [class]="compare(t, enteredText[i])"
+          >{{ t }}</span
+        ></em
+      >
+    </div>
+    <div class="user-input">
+      <input type="text" [(ngModel)]="enteredText" />
+    </div>
+    <div>{{ enteredText === words ? "Success" : "" }}</div>
+  </div>
+</div>
